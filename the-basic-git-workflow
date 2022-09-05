@@ -1,0 +1,7 @@
+Each repository will have a Git directory, a working tree, and a staging area. And we called out that files can be in three different states, modified, staged, and committed.
+
+First, all the files we want to manage with Git must be a part of a Git repository. We initialize a new repository by running the git init command in any file system directory. For example, let's use the mkdir command to create a directory called scripts, and then change into it and initialize an empty Git repository init.
+Check out our current configurationby using the git config -l command. There's a bunch of info in there, pay special attention to the user.email and the user.name lines.
+This information will appear in public commit logs if you use a shared repository. For privacy reasons, you might want to use different identities when dealing with your private work and when submitting code to public repositories.
+
+modified, staging area, commit = this is the process to update the files using git. 
