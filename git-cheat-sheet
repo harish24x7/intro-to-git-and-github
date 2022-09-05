@@ -1,0 +1,26 @@
+GIT STATUS
+Displays:
+• paths that have differences between the index file and the current HEAD commit,
+• paths that have differences between the workspace and the index file, and
+• paths in the workspace that are not tracked by git.
+
+
+GIT ADD FILE... OR DIR...
+Adds the current content of new or modified files to the index, thus staging that content for inclusion in the next commit. Use add --interactive to add the modified contents in the workspace interactively to the index.
+
+
+CONFIGURING TOOLING
+Configure user information for all local repositories
+$ git config --global user.name "[name]" 
+(Sets the name you want attached to your commit transactions)
+
+$ git config --global user.email "[email address]"
+(Sets the email you want attached to your commit transactions)
+
+$ git config --global color.ui auto
+(Enables helpful colorization of command line output)
+
+
+
+GIT (rm) FILES...
+Remove a file from the workspace and the index.
