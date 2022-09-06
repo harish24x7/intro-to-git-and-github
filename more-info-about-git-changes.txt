@@ -1,0 +1,109 @@
+git commit -a
+On branch master
+nothing to commit, working tree clean
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git diff
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ atom all_checks.py
+
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git diff
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ cd
+
+DELL@Harish MINGW64 ~ (master)
+$ cd /d/TKSS
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ all_checks.py
+bash: all_checks.py: command not found
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git diff
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git add all_checks.py
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git diff
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ diff --git a
+diff: unknown option -- git
+diff: Try 'diff --help' for more information.
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ diff --git a/all_checks.py
+diff: unknown option -- git
+diff: Try 'diff --help' for more information.
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git diff
+diff --git a/all_checks.py b/all_checks.py
+index e91df7f..dc7f0cf 100644
+--- a/all_checks.py
++++ b/all_checks.py
+@@ -9,6 +9,7 @@ def check_reboot ():
+             print ("Pending Reboot.")
+             sys.exit(1)
+             print ("Everything is ok.")
++            """Everything is ok will print"""
+             sys.exit(0)
+
+             main()
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git add -p
+diff --git a/all_checks.py b/all_checks.py
+index e91df7f..dc7f0cf 100644
+--- a/all_checks.py
++++ b/all_checks.py
+@@ -9,6 +9,7 @@ def check_reboot ():
+             print ("Pending Reboot.")
+             sys.exit(1)
+             print ("Everything is ok.")
++            """Everything is ok will print"""
+             sys.exit(0)
+
+             main()
+(1/1) Stage this hunk [y,n,q,a,d,e,?]? y
+
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git diff --staged
+diff --git a/all_checks.py b/all_checks.py
+new file mode 100644
+index 0000000..dc7f0cf
+--- /dev/null
++++ b/all_checks.py
+@@ -0,0 +1,15 @@
++import os
++import sys
++def check_reboot ():
++    """Returns True if the computer has a pending reboot."""
++    return os.path.exist("/run/reboot-required")
++
++    def main():
++        if check_reboot():
++            print ("Pending Reboot.")
++            sys.exit(1)
++            print ("Everything is ok.")
++            """Everything is ok will print"""
++            sys.exit(0)
++
++            main()
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git commit -m 'Added a message when everything is ok.'
+[master 504f623] Added a message when everything is ok.
+ 1 file changed, 15 insertions(+)
+ create mode 100644 all_checks.py
+
+DELL@Harish MINGW64 /d/TKSS (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
