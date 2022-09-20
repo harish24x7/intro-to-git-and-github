@@ -1,0 +1,98 @@
+Question 1
+Let's say we've made a mistake in our latest commit to a public branch. Which of the following commands is the best option for fixing our mistake?
+
+1 / 1 point
+
+git revert
+
+
+git commit --amend
+
+
+git reset
+
+
+git checkout -- <file>
+
+Correct
+Nice job! git revert will create a new commit to reverse the previous one, and is the best option for undoing commits on public branches.
+
+2.
+Question 2
+If we want to rollback a commit on a public branch that wasn't the most recent one using the revert command, what must we do?
+
+1 / 1 point
+
+Use the git reset HEAD~2 command instead of revert
+
+
+Use the revert command repeatedly until we've reached the one we want
+
+
+use the commit ID at the end of the git revert command
+
+
+Use the git commit --amend command instead
+
+Correct
+Nice work! The commit ID is a 40-character hash that identifies each commit.
+
+3.
+Question 3
+What does Git use cryptographic hash keys for?
+
+1 / 1 point
+
+To secure project backups
+
+
+To guarantee the consistency of our repository
+
+
+To encrypt passwords
+
+
+To identify commits
+
+Correct
+Woohoo! Git doesn't really use these hashes for security. Instead, they’re used to guarantee the consistency of our repository.
+
+4.
+Question 4
+What does the command git commit --amend do?
+
+1 / 1 point
+
+Start a new branch
+
+
+Create a copy of the previous commit
+
+
+Delete the previous commit
+
+
+Overwrite the previous commit
+
+Correct
+Awesome! The command git commit --amend will overwrite the previous commit with what is already in the staging area.
+
+5.
+Question 5
+How can we easily view the log message and diff output the last commit if we don't know the commit ID?
+
+1 / 1 point
+
+git show
+
+
+git identify
+
+
+git log
+
+
+git revert 
+
+Correct
+Right on! The git show command without an object parameter specified  will default to show us information about the commit pointed to by the HEAD.
