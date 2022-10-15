@@ -4,15 +4,7 @@ Executing git init creates a .git subdirectory in the current working directory,
 
 If you've already run git init on a project directory containing a .git subdirectory, you can safely run git init again on the same project directory. The operation is what we call idempotent; running it again doesn't override an existing .git configuration.
 
-
-
-
-
 The command git commit with -m flag takes the commit message, too. This is different to the command without flag, where you had to type the commit message within the editor. If multiple -m flags are given to the command, it concatenates the values as separate paragraphs.
-
-
-
-
 
 Git log command shows the commit history of the repository. It shows all the commits on the repository represented by a unique commit ID at the top of each commit. It also shows the author, date, and time and the commit message associated with the commits.
 
